@@ -1,0 +1,9 @@
+{
+  "_note": "値はすべて例。実際の単価は、使うモデルの公式の料金ページで確認して書き換える。fx_rate は 1 USD を currency_label の通貨に換える率 (これも例)",
+  "currency_label": "円",
+  "fx_rate": 100,
+  "models": {
+    "example-small": {"in_usd_per_mtok": 1.0, "out_usd_per_mtok": 5.0},
+    "example-large": {"in_usd_per_mtok": 5.0, "out_usd_per_mtok": 25.0}
+  }
+}

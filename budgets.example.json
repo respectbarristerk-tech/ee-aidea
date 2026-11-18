@@ -1,0 +1,12 @@
+{
+  "_note": "月ごとの配分の例。total を発行し、protected_depts の各課に protected_min_per_case × protected_cases を先に配り、残りを split_depts で等分する。数値は例",
+  "months": {
+    "2030-01": {
+      "total": 1000,
+      "protected_min_per_case": 50,
+      "protected_cases": 2,
+      "split_depts": ["research", "engineering"],
+      "basis": "配分の根拠を1行で (例: 先月の利用実績を見て決めた)"
+    }
+  }
+}

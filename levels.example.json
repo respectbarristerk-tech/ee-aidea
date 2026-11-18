@@ -1,0 +1,24 @@
+{
+  "_note": "反映先 (deploy_root) の中の場所 → 色。一覧にない場所は黄。複数に当たれば高い方。この一覧の変更は赤。must_be_red は起動時の自己点検 (ここに挙げた場所が赤でなければ起動しない)。変えたら内容を確認して pin-levels を実行する",
+  "rules": [
+    {"pattern": "notes/*", "level": "green"},
+    {"pattern": "docs/*", "level": "green"},
+    {"pattern": "settings/*", "level": "yellow"},
+    {"pattern": "policy/*", "level": "red"},
+    {"pattern": "keys/*", "level": "red"},
+    {"pattern": "levels.json", "level": "red"}
+  ],
+  "must_be_red": ["policy/x.json", "keys/x", "levels.json"],
+  "required_fields": {
+    "green": ["summary", "rollback"],
+    "yellow": ["summary", "rollback", "risk", "reviewer_objection"],
+    "red": ["summary", "rollback", "risk", "reviewer_objection", "expected_effect"]
+  },
+  "strict_fields": ["expected_effect"],
+  "field_labels": {
+    "rollback": "戻せるか・戻し方",
+    "risk": "うまくいかなかったときの最悪の影響",
+    "reviewer_objection": "検証担当の反対意見",
+    "expected_effect": "期待される効果（新しくできるようになること）"
+  }
+}

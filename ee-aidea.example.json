@@ -1,0 +1,19 @@
+{
+  "_note": "このファイルをコピーして ee-aidea.json にする。秘密は書かない。相対パスはこのファイルのあるフォルダが基準",
+  "unit": "pt",
+  "currency_label": "円",
+  "utc_offset_hours": 9,
+  "departments": ["research", "engineering", "qa"],
+  "protected_depts": ["qa"],
+  "labels": {"research": "調査", "engineering": "開発", "qa": "検証"},
+  "ledger": {"path": "data/ledger.jsonl", "rates": "rates.json", "budgets": "budgets.json"},
+  "auction": {"log": "data/auction_log.jsonl", "max_slots": 2, "min_max_bid": 10, "default_trust": 0.5},
+  "approval": {
+    "mode": "file",
+    "deploy_root": "sandbox",
+    "levels": "levels.json",
+    "data_dir": "data",
+    "wait_hours_red": 24, "expire_days": 7, "max_message_age_minutes": 15, "poll_seconds": 30,
+    "file": {"inbox": "data/inbox.txt", "outbox": "data/outbox.log"}
+  }
+}
