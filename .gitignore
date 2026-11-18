@@ -1,0 +1,7 @@
+ee-aidea.json
+data/
+sandbox/
+*.key
+__pycache__/
+*.pyc
+*.bak*
